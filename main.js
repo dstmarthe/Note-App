@@ -1,7 +1,10 @@
 //Global selectors
 const lInput = document.querySelector("#nField");
+const lTitle = document.querySelector("#nTitle")
 const lSubmit = document.querySelector(".leaf-submit");
 const stem = document.querySelector("#leaves");
+const leafContent = document.querySelectorAll(".leafCont")
+
 
 //Event Listeners
 lSubmit.addEventListener("click", addNote);
@@ -14,9 +17,11 @@ function addNote(e) {
     noteDiv.classList.add("leaf")
     
     const newNote = document.createElement("p")
-    newNote.innerText = lInput.value
+    
+    newNote.innerText = `${lTitle.value}
+    ${lInput.value}
+    `
     newNote.classList.add("leafCont")
-
     noteDiv.appendChild(newNote)
 
     const deleteLeaf = document.createElement("button");
@@ -27,7 +32,8 @@ function addNote(e) {
     //Append to list
     stem.appendChild(noteDiv);
     lInput.value = "";
-
+    lTitle.value = "";
+    document.querySelectorAll(".leafCont").forEach((link) => link.addEventListener("click", extendNote));
 }
 
 function deleteNote(e) {
@@ -36,4 +42,9 @@ function deleteNote(e) {
      const thisNote = note.parentElement;
      thisNote.remove();
  }
+} 
+function extendNote(e) {
+    const thisnote = e.target
+    thisnote.classList.toggle("extendLeaf")
+
 }
