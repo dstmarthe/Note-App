@@ -64,11 +64,8 @@
     $stmt->execute(array(":xyz" => $_SESSION['user_id']));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     if ( $row === false ) {
-        $_SESSION['error'] = 'Empty';
-        header( 'Location: index.php' ) ;
-        return;
+        continue;
     }
-    echo 
     foreach ( $rows as $row ) {
      echo '<script type="text/javascript">',
      'autoNote('.$row['note_title'].','.$row['note'].');',
