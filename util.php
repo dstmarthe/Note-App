@@ -33,7 +33,7 @@ function navbar() {
               "<input  id='username'",
                       "type='text'",
                       "name='name'",
-                      "placeholder='Username'",
+                      "placeholder='Username'>",
               "<input  id='email'",
                       "type='email'",
                       "name='email'",
