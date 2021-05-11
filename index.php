@@ -1,13 +1,8 @@
 <?php
   session_start(); 
   require_once "pdo.php";
-  require_once "util.php" 
-  require_once "login.php" 
-   if (isset($_POST['logout']))
-   {
-       header( 'Location: logout.php' ) ;
-   return;
-   }
+  require_once "util.php";
+  include "login.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,43 +18,53 @@
   <body>
     <main>
       <nav>
-        <ul>
-        <li id="login">
-          <a id="login-trigger" href="#">
-            Log in <i class="fa fa-caret-down" aria-hidden="true"></i>
+        <?php 
+        if ( ! isset($_SESSION['user_id'])) {
+          echo 
+          "<ul>
+        <li id='login'>
+          <a id='login-trigger' href='#'>
+            Log in <i class='fa fa-caret-down' aria-hidden='true'></i>
           </a>
-          <div id="login-content">
+          <div id='login-content'>
             <form>
-              <fieldset id="inputs">
-                <input  id="username"
-                        type="email"
-                        name="email"
-                        placeholder="Your email address"
+              <fieldset id='inputs'>
+                <input  id='username'
+                        type='email'
+                        name='email'
+                        placeholder='Your email address'
                         required>
-                <input  id="password"
-                        type="password"
-                        name="pass"
-                        placeholder="Password"
+                <input  id='password'
+                        type='password'
+                        name='pass'
+                        placeholder='Password'
                         required>
               </fieldset>
-              <fieldset id="actions">
-                <input  type="submit"
-                        id="submit"
-                        value="Log in">
+               \flashMessages();
+              <fieldset id='actions'>
+                <input  type='submit'
+                        id='submit'
+                        value='Log in'>
                 <label>
-                  <input  type="checkbox"
-                          checked="checked">
+                  <input  type='checkbox'
+                          checked='checked'>
                   Keep me signed in
                 </label>
+               
               </fieldset>
-              <?flashMessages()?>
+              
             </form>
           </div>
         </li>
-        <li id="signup">
-          <a href="">Sign up</a>
+        <li id='signup'>
+          <a href='signup.php'>Sign up</a>
         </li>
-      </ul>
+      </ul>";
+    } else 
+    {
+      echo "<p style='name'>".$_SESSION['name']."</p>";
+    }
+      ?>
       </nav>
       <form method="POST" id="noteField">
         <label for="nTitle">Title </label

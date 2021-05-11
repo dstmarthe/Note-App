@@ -9,4 +9,9 @@ function flashMessages() {
         unset($_SESSION['success']);
     }
 }
+if (isset($_POST['logout']))
+{
+    header( 'Location: logout.php' ) ;
+return;
+}
 ?>
