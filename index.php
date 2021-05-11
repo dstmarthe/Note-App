@@ -25,6 +25,11 @@
           );
         }
       }
+      if ( isset($_POST['delete'])) {
+        $sql = "DELETE FROM notes WHERE user_id = :uid";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(array(':uid' => $_SESSION['user_id']));
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
