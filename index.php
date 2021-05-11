@@ -90,7 +90,7 @@
     $stmt->execute(array(":xyz" => $_SESSION['user_id']));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     if ( ! $rows ) {
-      break;
+      return;
     }
     foreach ( $rows as $row ) {
      echo '<script type="text/javascript">',
