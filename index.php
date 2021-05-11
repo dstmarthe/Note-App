@@ -14,8 +14,8 @@
          }
          else {
             $stmt = $pdo->prepare('INSERT INTO notes
-            (title, note)
-            VALUES ( :ttl, :nt)');
+            (title, note, user_id)
+            VALUES ( :ttl, :nt, :uid)');
           
           $stmt->execute(array(
             ':uid' => $_SESSION['user_id'],
