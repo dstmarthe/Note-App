@@ -1,5 +1,13 @@
 <?php
-  session_start();
+  session_start(); 
+  require_once "pdo.php";
+  require_once "util.php" 
+  require_once "login.php" 
+   if (isset($_POST['logout']))
+   {
+       header( 'Location: logout.php' ) ;
+   return;
+   }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,12 +33,12 @@
               <fieldset id="inputs">
                 <input  id="username"
                         type="email"
-                        name="Email"
+                        name="email"
                         placeholder="Your email address"
                         required>
                 <input  id="password"
                         type="password"
-                        name="Password"
+                        name="pass"
                         placeholder="Password"
                         required>
               </fieldset>
@@ -44,6 +52,7 @@
                   Keep me signed in
                 </label>
               </fieldset>
+              <?flashMessages()?>
             </form>
           </div>
         </li>
@@ -52,7 +61,7 @@
         </li>
       </ul>
       </nav>
-      <form method="POST">
+      <form method="POST" id="noteField">
         <label for="nTitle">Title </label
         ><input type="text" name="title" id="nTitle" placeholder="Add a Title" autocomplete="off"/>
         <label for="nField">Enter a note</label>
