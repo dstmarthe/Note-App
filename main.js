@@ -47,4 +47,4 @@ function deleteNote(e) {
 function extendNote(e) {
 	const thisnote = e.target;
 	thisnote.classList.toggle("extendLeaf");
-} //mysql://b2d082e11cb89e:f6ce543b@us-cdbr-east-03.cleardb.com/heroku_a922c806c782a0a?reconnect=trueY
+}
