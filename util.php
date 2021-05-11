@@ -33,7 +33,7 @@ function navbar() {
               "<input  id='username'",
                       "type='email'",
                       "name='email'",
-                      "placeholder='Your email address'",
+                      "placeholder='Email Address'",
                       "required>",
               "<input  id='password'",
                       "type='password'",
@@ -58,7 +58,7 @@ function navbar() {
         </div>
       </li>
       <li id='signup'>
-        <form method='post'><a name='signup' href='' id='signupLink'>Sign up</a></form>
+        <form method='post'><a name='signup' type='submit' id='signupLink'>Sign up</a></form>
       </li>
     </ul>";
   } else 
