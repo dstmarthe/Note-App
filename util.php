@@ -59,7 +59,7 @@ function navbar() {
     </ul>";
   } else 
   {
-    echo "<p style='name'>".$_SESSION['name']."</p>";
+    echo "<span id='name'>Welcome ".$_SESSION['name']."</span><button name='logout' id='logout'>    logout</button>";
   }
     ?>
 }
