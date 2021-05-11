@@ -31,7 +31,6 @@ return;
       header( 'Location: signupsuccess.php' ) ;
             return;
   ?>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,11 +39,11 @@ return;
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="signupStyle.css" />
     <title>Sign Up</title>
-    <link rel="shortcut icon" type="image/svg+xml" href="favicon.svg"/>
+    <link rel="shortcut icon" type="image/svg+xml" href="favicon.png"/>
 </head>
 <body>
 <nav role="navigation">
-      <img src="favicon.svg" alt="logo" id="logo">
+      <img src="favicon.png" alt="logo" id="logo">
         <?php
          flashMessages(); 
          navbar();

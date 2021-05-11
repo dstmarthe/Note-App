@@ -40,11 +40,11 @@
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Leaf a Note</title>
-    <link rel="shortcut icon" type="image/svg+xml" href="favicon.svg"/>
+    <link rel="shortcut icon" type="image/svg+xml" href="favicon.png"/>
   </head>
   <body>
   <nav role="navigation">
-      <img src="favicon.svg" alt="logo" id="logo">
+      <img src="favicon.png" alt="logo" id="logo">
         <?php
          flashMessages(); 
          navbar();
