@@ -32,7 +32,7 @@ if ( isset($_POST['email']) && isset($_POST['pass']) ) {
             
         } else {
             $_SESSION["error"] = "Incorrect password.";
-            error_log("Login fail ".$_POST['email']");
+            error_log("Login fail ".$_POST['email']);
         }
     }
 }
