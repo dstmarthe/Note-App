@@ -1,5 +1,4 @@
 <?php
- session_start();
 if ( isset($_POST['cancel'] ) ) {
     header("Location: index.php");
     return;
@@ -17,10 +16,7 @@ if ( isset($_POST['email']) && isset($_POST['pass']) ) {
             WHERE email = :em');
         $stmt->execute(array( ':em' => $_POST['email']));
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        if( ! $row)
-{
-    $_SESSION["error"] = "Doesn't exist.";
-}
+        if( ! $row) $_SESSION["error"] = "Doesn't exist.";
         if ( password_verify($_POST['pass'], $row['password']) !== false) {
             $_SESSION['name'] = $row['name'];
             $_SESSION['user_id'] = $row['user_id'];
