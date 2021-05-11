@@ -3,7 +3,7 @@
   require_once "pdo.php";
   require_once "util.php";
   require_once "login.php";
-  require_once "signup.php"
+  require_once "signup.php";
 
   if ( isset($_POST['title']) && isset($_POST['note'])) 
      {
