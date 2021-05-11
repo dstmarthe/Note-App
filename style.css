@@ -17,8 +17,8 @@ main {
 	min-width: 100%;
 }
 #logo {
-	display: inline-flex;
-	margin-left: auto;
+	display: flex;
+	place-self: center;
 	height: 95%;
 }
 nav {
