@@ -58,7 +58,7 @@ function navbar() {
         </div>
       </li>
       <li id='signup'>
-        <a name='signup' href='#'>Sign up</a>
+        <button name='signup' href='#'>Sign up</button>
       </li>
     </ul>";
   } else 
