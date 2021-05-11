@@ -35,9 +35,8 @@ function navbar() {
                       "name='pass'",
                       "placeholder='Password'",
                       "required>",
-            "</fieldset>
-             ".<?flashMessages();?>."
-            <fieldset id='actions'>
+            "</fieldset>",
+            "<fieldset id='actions'>
               <input  type='submit'
                       id='submit'
                       value='Log in'>
