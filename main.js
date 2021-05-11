@@ -48,3 +48,29 @@ function extendNote(e) {
 	const thisnote = e.target;
 	thisnote.classList.toggle("extendLeaf");
 }
+//happens automatically if the user is logged in
+function autoNote(title, note) {
+	const noteDiv = document.createElement("div");
+	noteDiv.classList.add("leaf");
+
+	const newNote = document.createElement("p");
+
+	newNote.innerText = `${title}
+${note}
+`;
+	newNote.classList.add("leafCont");
+	noteDiv.appendChild(newNote);
+
+	const deleteLeaf = document.createElement("button");
+	deleteLeaf.innerHTML = "<i class= 'fa fa-trash'></i>";
+	deleteLeaf.classList.add("deleteL");
+	newNote.appendChild(deleteLeaf);
+
+	//Append to list
+	stem.appendChild(noteDiv);
+	lInput.value = "";
+	lTitle.value = "";
+	document
+		.querySelectorAll(".leafCont")
+		.forEach((link) => link.addEventListener("click", extendNote));
+}

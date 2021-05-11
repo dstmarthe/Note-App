@@ -40,7 +40,7 @@
                         placeholder='Password'
                         required>
               </fieldset>
-               \flashMessages();
+               <?flashMessages();?>
               <fieldset id='actions'>
                 <input  type='submit'
                         id='submit'
@@ -94,8 +94,28 @@
           if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
             else $(this).find('span').html('&#x25BC;')
           })
-      });</script>
+      });
+      </script>
     </main>
     <script src="main.js"></script>
+    <?php
+      if (isset($_SESSION['user_id'])) {
+        $stmt = $pdo->query("SELECT note_title, note FROM notes WHERE user_id = :xyz");
+    $stmt->execute(array(":xyz" => $_SESSION['user_id']));
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    if ( $row === false ) {
+        $_SESSION['error'] = 'Empty';
+        header( 'Location: index.php' ) ;
+        return;
+    }
+    echo 
+    foreach ( $rows as $row ) {
+     echo '<script type="text/javascript">',
+     'autoNote('.$row['note_title'].','.$row['note'].');',
+      '</script>;'
+    ;
+    }
+  }
+    ?>
   </body>
 </html>
