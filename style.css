@@ -23,7 +23,7 @@ main {
 	place-content: center;
 }
 #logo {
-	display: grid;
+	display: inline-block;
 	place-self: center;
 	height: 95%;
 }
