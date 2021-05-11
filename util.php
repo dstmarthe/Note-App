@@ -32,8 +32,9 @@ function navbar() {
             "<fieldset id='inputs'>",
               "<input  id='username'",
                       "type='text'",
-                      "name='name'",
-                      "placeholder='Username'>",
+                      "name='email'",
+                      "placeholder='Username'",
+                      "required>",
               "<input  id='email'",
                       "type='email'",
                       "name='email'",
@@ -48,9 +49,8 @@ function navbar() {
             "<fieldset id='actions'>
               <input  type='submit'
                       class='submit'
-                      value='Log in'
-                      name='login>
-            <input type='submit' class='submit' name='signup' id='signup' value='Sign Up'>
+                      value='Log in'>
+            <input type='submit' class='submit' name='signup' value='Sign Up'>
               <label>
                 <input  type='checkbox'
                         checked='checked'
