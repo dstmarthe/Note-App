@@ -61,6 +61,6 @@ function navbar() {
   {
     echo "<span id='name'>Welcome ".$_SESSION['name']."</span><button name='logout' id='logout'>    logout</button>";
   }
-    ?>
+  
 }
 ?>
