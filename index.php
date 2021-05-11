@@ -3,6 +3,28 @@
   require_once "pdo.php";
   require_once "util.php";
   include "login.php";
+
+  if ( isset($_POST['title']) && isset($_POST['note'])) 
+     {
+
+         if (strlen($_POST['title']) < 1 || strlen($_POST['note']) < 1)
+         {
+            $_SESSION['error'] = "All fields are required";
+         
+         }
+         else {
+            $stmt = $pdo->prepare('INSERT INTO notes
+            (title, note)
+            VALUES ( :ttl, :nt)');
+          
+          $stmt->execute(array(
+            ':uid' => $_SESSION['user_id'],
+            ':fn' => $_POST['first_name'],
+            ':ln' => $_POST['last_name'],
+            ':em' => $_POST['email'],
+            ':he' => $_POST['headline'],
+            ':su' => $_POST['summary'])
+          );
 ?>
 <!DOCTYPE html>
 <html lang="en">
