@@ -19,6 +19,7 @@ main {
 #logo {
 	display: grid;
 	place-content: center;
+	height: 80%;
 }
 nav {
 	background-color: #c64756;
