@@ -85,7 +85,7 @@ nav #login-content {
 	display: none;
 	position: absolute;
 	top: 24px;
-	right: 0;
+	margin-right: 3rem;
 	z-index: 999;
 	background: #fff;
 	background-image: linear-gradient(top, #fff, #eee);
