@@ -89,8 +89,8 @@
         $stmt = $pdo->query("SELECT note_title, note FROM notes WHERE user_id = :xyz");
     $stmt->execute(array(":xyz" => $_SESSION['user_id']));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    if ( $row === false ) {
-      return;
+    if ( ! $rows ) {
+      break;
     }
     foreach ( $rows as $row ) {
      echo '<script type="text/javascript">',
