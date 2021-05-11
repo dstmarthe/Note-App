@@ -19,11 +19,9 @@
           
           $stmt->execute(array(
             ':uid' => $_SESSION['user_id'],
-            ':fn' => $_POST['first_name'],
-            ':ln' => $_POST['last_name'],
-            ':em' => $_POST['email'],
-            ':he' => $_POST['headline'],
-            ':su' => $_POST['summary'])
+            ':nt' => $_POST['note'],
+            ':ttl' => $_POST['title']
+            )
           );
 ?>
 <!DOCTYPE html>
