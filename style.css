@@ -16,6 +16,10 @@ main {
 	height: 100%;
 	min-width: 100%;
 }
+#logo {
+	display: grid;
+	place-content: center;
+}
 nav {
 	background-color: #c64756;
 	padding: 6px;
