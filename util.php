@@ -30,7 +30,7 @@ function navbar() {
         "<div id='login-content'>",
           "<form>",
             "<fieldset id='inputs'>",
-            "<input  id='name'",
+              "<input  id='username'",
                       "type='text'",
                       "name='name'",
                       "placeholder='Username'",
@@ -40,12 +40,11 @@ function navbar() {
                       "name='email'",
                       "placeholder='Email Address'",
                       "required>",
-              "<input  id='password'",
+              "<input  id='password",
                       "type='password'",
                       "name='pass'",
                       "placeholder='Password'",
                       "required>",
-              
             "</fieldset>",
             "<fieldset id='actions'>
               <input  type='submit'
