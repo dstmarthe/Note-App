@@ -18,7 +18,8 @@
   <body>
     <main>
       <nav>
-        <?php 
+        <?php
+         flashMessages(); 
         if ( ! isset($_SESSION['user_id'])) {
           echo 
           "<ul>
