@@ -23,6 +23,8 @@
             ':ttl' => $_POST['title']
             )
           );
+        }
+      }
 ?>
 <!DOCTYPE html>
 <html lang="en">
