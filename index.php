@@ -2,7 +2,7 @@
   session_start(); 
   require_once "pdo.php";
   require_once "util.php";
-  include "login.php";
+  require_once "login.php";
 
   if ( isset($_POST['title']) && isset($_POST['note'])) 
      {
