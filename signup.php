@@ -4,7 +4,7 @@
       header( 'Location: index.php' ) ;
   return;
   }
-  if ( isset($_POST['email']) && isset($_POST['pass']) && isset($_POST['signup'])) {
+  if ( isset($_POST['signup'])) {
     if ( strlen($_POST['email']) < 1 || strlen($_POST['pass']) < 1 ) {
         $_SESSION['error'] = "Email and password are required";
     } elseif (strpos($_POST['email'], "@") === false){
