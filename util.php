@@ -34,7 +34,6 @@ function navbar() {
                       "type='text'",
                       "name='name'",
                       "placeholder='Username'",
-                      "required>",
               "<input  id='email'",
                       "type='email'",
                       "name='email'",
