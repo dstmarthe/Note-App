@@ -17,8 +17,8 @@ main {
 	min-width: 100%;
 }
 #logo {
-	margin: 0 auto;
 	display: inline-flex;
+	margin-left: auto;
 	height: 95%;
 }
 nav {
@@ -55,7 +55,7 @@ nav #login {
 }
 
 nav #login-trigger,
-nav #signup button {
+nav #signup a {
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
@@ -68,7 +68,7 @@ nav #signup button {
 	text-shadow: 0 1px 0 #fff;
 }
 
-nav #signup button {
+nav #signup a {
 	border-radius: 0 3px 3px 0;
 }
 
@@ -78,7 +78,7 @@ nav #login-trigger {
 
 nav #login-trigger:hover,
 nav #login .active,
-nav #signup button:hover {
+nav #signup a:hover {
 	background: #fff;
 }
 
@@ -93,7 +93,6 @@ nav #login-content {
 	padding: 15px;
 	box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.9);
 	border-radius: 3px 0 3px 3px;
-	width: max-content;
 }
 
 nav li #login-content {
