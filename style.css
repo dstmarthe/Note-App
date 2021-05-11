@@ -16,8 +16,14 @@ main {
 	height: 100%;
 	min-width: 100%;
 }
+.slb {
+	position: absolute;
+	z-index: 50;
+	display: grid;
+	place-content: center;
+}
 #logo {
-	display: flex;
+	display: grid;
 	place-self: center;
 	height: 95%;
 }

@@ -82,5 +82,5 @@ $("#signupLink").simpleLightbox();
 SimpleLightbox.open({
 	content:
 		'<h1 id="title">Sign up</h1><p id="description">Signing up allows you to save notes!</p><form method="post" id="survey-form"><label for="name" id="name-label" class="box">Username:<br><br><br><input type="text" id="usern" name="name" placeholder="Enter a username" required></label><label for="email" id="email-label" class="box"  >Email:<br><br><br><input type="email" id="email" name="email" placeholder="Enter your e-mail address" required></label><label for="pass" class="box" >Email:<br><br><br><input type="password" id="email" name="pass" required placeholder="Enter a password"></label><button type="submit" id="submit">Submit</button></form>',
-	elementClass: "slbContentEl",
+	elementClass: "slb",
 });
