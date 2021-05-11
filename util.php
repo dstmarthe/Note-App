@@ -49,7 +49,8 @@ function navbar() {
             "<fieldset id='actions'>
               <input  type='submit'
                       class='submit'
-                      value='Log in'>
+                      value='Log in'
+                      name='login>
             <input type='submit' class='submit' name='signup' id='signup' value='Sign Up'>
               <label>
                 <input  type='checkbox'
