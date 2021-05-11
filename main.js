@@ -4,7 +4,8 @@ const lTitle = document.querySelector("#nTitle");
 const lSubmit = document.querySelector(".leaf-submit");
 const stem = document.querySelector("#leaves");
 const leafContent = document.querySelectorAll(".leafCont");
-
+const signupLink = document.querySelector("#signupLink");
+signupLink.preventDefault();
 //Event Listeners
 lSubmit.addEventListener("click", addNote);
 stem.addEventListener("click", deleteNote);

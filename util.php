@@ -58,7 +58,7 @@ function navbar() {
         </div>
       </li>
       <li id='signup'>
-        <form method='post'><a name='signup' href='#'>Sign up</a></form>
+        <form method='post'><a name='signup' href='' id='signupLink'>Sign up</a></form>
       </li>
     </ul>";
   } else 
