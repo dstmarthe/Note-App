@@ -14,4 +14,53 @@ if (isset($_POST['logout']))
     header( 'Location: logout.php' ) ;
 return;
 }
+function navbar() {
+    if ( ! isset($_SESSION['user_id'])) {
+        echo 
+        "<ul>",
+      "<li id='login'>",
+       "<a id='login-trigger' href='#'>",
+          "Log in <i class='fa fa-caret-down' aria-hidden='true'></i>",
+        "</a>",
+        "<div id='login-content'>",
+          "<form>",
+            "<fieldset id='inputs'>",
+              "<input  id='username'",
+                      "type='email'",
+                      "name='email'",
+                      "placeholder='Your email address'",
+                      "required>",
+              "<input  id='password'",
+                      "type='password'",
+                      "name='pass'",
+                      "placeholder='Password'",
+                      "required>",
+            "</fieldset>
+             ".<?flashMessages();?>."
+            <fieldset id='actions'>
+              <input  type='submit'
+                      id='submit'
+                      value='Log in'>
+              <label>
+                <input  type='checkbox'
+                        checked='checked'
+                        aria-checked='true'>
+                Keep me signed in
+              </label>
+             
+            </fieldset>
+            
+          </form>
+        </div>
+      </li>
+      <li id='signup'>
+        <a href='signup.php'>Sign up</a>
+      </li>
+    </ul>";
+  } else 
+  {
+    echo "<p style='name'>".$_SESSION['name']."</p>";
+  }
+    ?>
+}
 ?>
