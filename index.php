@@ -14,59 +14,18 @@
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Leaf a Note</title>
+    <link rel="shortcut icon" type="image/svg+xml" href="favicon.svg"/>
   </head>
   <body>
-    <main>
-      <nav>
+  <nav role="navigation">
+      <img src="favicon.svg" alt="logo" id="logo">
         <?php
          flashMessages(); 
-        if ( ! isset($_SESSION['user_id'])) {
-          echo 
-          "<ul>
-        <li id='login'>
-          <a id='login-trigger' href='#'>
-            Log in <i class='fa fa-caret-down' aria-hidden='true'></i>
-          </a>
-          <div id='login-content'>
-            <form>
-              <fieldset id='inputs'>
-                <input  id='username'
-                        type='email'
-                        name='email'
-                        placeholder='Your email address'
-                        required>
-                <input  id='password'
-                        type='password'
-                        name='pass'
-                        placeholder='Password'
-                        required>
-              </fieldset>
-               <?flashMessages();?>
-              <fieldset id='actions'>
-                <input  type='submit'
-                        id='submit'
-                        value='Log in'>
-                <label>
-                  <input  type='checkbox'
-                          checked='checked'>
-                  Keep me signed in
-                </label>
-               
-              </fieldset>
-              
-            </form>
-          </div>
-        </li>
-        <li id='signup'>
-          <a href='signup.php'>Sign up</a>
-        </li>
-      </ul>";
-    } else 
-    {
-      echo "<p style='name'>".$_SESSION['name']."</p>";
-    }
-      ?>
+         navbar();
+         ?>
       </nav>
+    <main>
+      
       <form method="POST" id="noteField">
         <label for="nTitle">Title </label
         ><input type="text" name="title" id="nTitle" placeholder="Add a Title" autocomplete="off"/>

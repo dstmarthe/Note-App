@@ -37,10 +37,19 @@ return;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="signupStyle.css" />
     <title>Sign Up</title>
+    <link rel="shortcut icon" type="image/svg+xml" href="favicon.svg"/>
 </head>
 <body>
+<nav role="navigation">
+      <img src="favicon.svg" alt="logo" id="logo">
+        <?php
+         flashMessages(); 
+         navbar();
+         ?>
+      </nav>
     <main id="main">
         <h1 id="title">Sign up</h1>
         <p id="description">Signing up allows you to save notes!</p>
