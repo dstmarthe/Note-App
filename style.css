@@ -17,7 +17,7 @@ main {
 	min-width: 100%;
 }
 #logo {
-	display: flex;
+	display: inline-flex;
 	place-content: center;
 	height: 80%;
 	z-index: 3;
@@ -40,7 +40,7 @@ nav ul {
 	padding: 0;
 	list-style: none;
 	position: relative;
-	display: -ms-inline-grid;
+	display: grid;
 	place-content: right;
 	background: #eee;
 	border-bottom: 1px solid #fff;
