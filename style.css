@@ -17,7 +17,7 @@ main {
 	min-width: 100%;
 }
 #logo {
-	display: grid;
+	display: inline-grid;
 	place-content: center;
 	height: 80%;
 }

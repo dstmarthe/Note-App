@@ -14,6 +14,11 @@ if (isset($_POST['logout']))
     header( 'Location: logout.php' ) ;
 return;
 }
+if (isset($_POST['signup']))
+{
+    header( 'Location: signup.php' ) ;
+return;
+}
 function navbar() {
     if ( ! isset($_SESSION['user_id'])) {
         echo 
@@ -53,7 +58,7 @@ function navbar() {
         </div>
       </li>
       <li id='signup'>
-        <a href='signup.php'>Sign up</a>
+        <a name='signup' false>Sign up</a>
       </li>
     </ul>";
   } else 
