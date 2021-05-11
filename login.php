@@ -17,9 +17,12 @@ if ( isset($_POST['email']) && isset($_POST['pass']) ) {
             WHERE email = :em');
         $stmt->execute(array( ':em' => $_POST['email']));
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        if ( password_verify($_POST['pass'], $row['password'])) {
+        if( ! $row)
+{
+    $_SESSION["error"] = "Doesn't exist.";
+}
+        if ( password_verify($_POST['pass'], $row['password']) !== false) {
             $_SESSION['name'] = $row['name'];
-   
             $_SESSION['user_id'] = $row['user_id'];
    
             // Redirect the browser to index.php
@@ -29,7 +32,7 @@ if ( isset($_POST['email']) && isset($_POST['pass']) ) {
             
         } else {
             $_SESSION["error"] = "Incorrect password.";
-            error_log("Login fail ".$_POST['email']." $check");
+            error_log("Login fail ".$_POST['email']");
         }
     }
 }
