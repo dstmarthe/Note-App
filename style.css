@@ -17,8 +17,8 @@ main {
 	min-width: 100%;
 }
 #logo {
+	margin: 0 auto;
 	display: inline-flex;
-	place-self: center;
 	height: 95%;
 }
 nav {
@@ -55,7 +55,7 @@ nav #login {
 }
 
 nav #login-trigger,
-nav #signup a {
+nav #signup button {
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
@@ -68,7 +68,7 @@ nav #signup a {
 	text-shadow: 0 1px 0 #fff;
 }
 
-nav #signup a {
+nav #signup button {
 	border-radius: 0 3px 3px 0;
 }
 
@@ -78,7 +78,7 @@ nav #login-trigger {
 
 nav #login-trigger:hover,
 nav #login .active,
-nav #signup a:hover {
+nav #signup button:hover {
 	background: #fff;
 }
 
