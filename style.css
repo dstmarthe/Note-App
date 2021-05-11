@@ -18,8 +18,8 @@ main {
 }
 #logo {
 	display: inline-flex;
-	place-content: center;
-	height: 80%;
+	place-self: center;
+	height: 95%;
 }
 nav {
 	background-color: #c64756;
