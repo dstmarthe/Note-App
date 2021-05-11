@@ -6,7 +6,7 @@ if ( isset($_POST['cancel'] ) ) {
 
 
 // Check to see if we have some POST data, if we do process it
-if ( isset($_POST['email']) && isset($_POST['pass']) ) {
+if ( isset($_POST['email']) && isset($_POST['pass']) && $_POST['submit'].value = "Log in") {
     if ( strlen($_POST['email']) < 1 || strlen($_POST['pass']) < 1 ) {
         $_SESSION['error'] = "Email and password are required";
     } elseif (strpos($_POST['email'], "@") === false){

@@ -45,6 +45,7 @@ function navbar() {
               <input  type='submit'
                       id='submit'
                       value='Log in'>
+            <input type='submit' name='signup' id='signupLink' value='Sign Up'>
               <label>
                 <input  type='checkbox'
                         checked='checked'
@@ -58,7 +59,7 @@ function navbar() {
         </div>
       </li>
       <li id='signup'>
-        <form method='post'><a name='signup' type='submit' id='signupLink'>Sign up</a></form>
+        <form method='post'><input type='submit' name='Log Out' id='signupLink' value='Log Out'></form>
       </li>
     </ul>";
   } else 
