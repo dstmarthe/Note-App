@@ -16,6 +16,8 @@
       );
       error_log("Signup success ".$_POST['email']);
       $_SESSION["success"] = "Sign up successful. Welcome!";
+      header("Location: index.php");
+      return;
     }
   }
   ?>

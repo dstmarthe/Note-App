@@ -30,6 +30,8 @@ if ( isset($_POST['login'])) {
         } else {
             $_SESSION["error"] = "Incorrect password.";
             error_log("Login fail ".$_POST['email']);
+            header("Location: index.php");
+            return;
         }
     }
 }
