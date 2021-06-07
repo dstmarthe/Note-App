@@ -14,11 +14,7 @@ if (isset($_POST['logout']))
     header( 'Location: logout.php' ) ;
 return;
 }
-if (isset($_POST['signup']))
-{
-    header( 'Location: signup.php' ) ;
-return;
-}
+
 function navbar() {
     if ( ! isset($_SESSION['user_id'])) {
         echo 
@@ -49,8 +45,9 @@ function navbar() {
             "<fieldset id='actions'>
               <input  type='submit'
                       class='submit'
+                      formaction='login.php'
                       value='Log in'>
-            <input type='submit' class='submit' name='signup' value='Sign Up'>
+            <input type='submit' class='submit' formaction='signup.php' name='signup' value='Sign Up'>
               <label>
                 <input  type='checkbox'
                         checked='checked'
@@ -64,7 +61,7 @@ function navbar() {
         </div>
       </li>
       <li id='signup'>
-        <form method='post'><input type='submit' name='Log Out' id='signupLink' value='Log Out'></form>
+        <form method='post'><input type='submit'formaction='logout.php' name='Log Out' id='signupLink' value='Log Out'></form>
       </li>
     </ul>";
   } else 
